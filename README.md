@@ -102,3 +102,10 @@
 #### Grid vs free movement prototying
 - built0in helpers to test 2x2 cell grid, 4/8dir movement vs free movement with 8 dir sprites
 - solves: lets me decide what feels best for the player/character before committing too hard
+
+
+
+# TODO
+Just remembered, we need to support battles too! So, how I imagine battles (graphically) is that they occur in the world map, it transitions to basically that same location, but the level is scaled up - somewhat like how I imagine HD Neptunia Rebirth;1.
+
+So, the player is in the level, and a battle occurs at the player character's position, some sort of transition into the battle, where it's the same level, and position, but scaled. There is some sort of invisible wall, to limit the battle field.
