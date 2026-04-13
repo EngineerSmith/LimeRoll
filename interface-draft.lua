@@ -49,17 +49,11 @@ local playerDef = LR.loadDynamicPropDefinition("save/player-looks.json")
 
 LR.setPersistentState(playerDef.id, state) -- so we can save player clothes this way, and just always load default first?
 
-
-function love.update(dt)
-  LR.update(dt) -- animation, state machines, weather, particles
-  -- ...
-end
-
 -- In love.draw
 LR.drawLevel("space_station") -- environment + weather sky + puddles + reflections
 
 -- Draw everything via ECS (dynamic props + characters)
-for _, e in ipairs(dynamicPropPool) do
+for _, e in ipairs(dynamicPropPool) do -- this bad, way too many GPU calls, put it in a SSBO, and send updates to that.
   LR.drawDynamicProp(e.dynamicProp.id, e.transform, e.dynamicProp.currentState, partialTick)
 end
 
