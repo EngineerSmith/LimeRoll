@@ -8,7 +8,8 @@ True to it's name. The 3D library idea has rolled into a 3D game framework built
 - Goal: be as lazy as possible - writing game code once and never touch infrastructure again
 - Works with or without ECS (pass tables or full ECS components)
 - Vulkan-only focus (2014+ GPUs, test on GTX 960 4Gig, mobile-ready to explore android consoles)
-  * If possible, aim for 960 2Gig - it should run amazing on my 3060 12Gig
+  * Aim for 960 2Gig - it should run amazing on my 3060 12Gig
+    - TODO, I should build a rig for my 960 for testing and add to my homelab that jenkins can access
 
 ### Asset Management
 [ ] Centralized loading/unloading/ref-counting by ID + persistent state
